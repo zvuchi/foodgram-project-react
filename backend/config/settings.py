@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'corsheaders',
     # my app`s
     'users',
+    'recipes'
 ]
 
 MIDDLEWARE = [
