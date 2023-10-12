@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import User
+from .models import User, Subscribe
 
 
 class BaseAdminSettings(admin.ModelAdmin):
@@ -21,4 +21,25 @@ class UsersAdmin(UserAdmin):
     search_fields = ('role', 'username')
 
 
+class SubscribeAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'user',
+        'author'
+    )
+    list_display_links = ('id', 'user')
+    search_fields = ('user',)
+
+
+class SubscribeAdmin(admin.ModelAdmin):
+    list_display = (
+        'id',
+        'user',
+        'author'
+    )
+    list_display_links = ('id', 'user')
+    search_fields = ('user',)
+
+
 admin.site.register(User, UsersAdmin)
+admin.site.register(Subscribe, SubscribeAdmin)
