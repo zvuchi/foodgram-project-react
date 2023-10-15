@@ -15,6 +15,7 @@ class TagAdmin(BaseAdminSettings):
         'color',
         'slug'
     )
+    prepopulated_fields = {'slug': ('name',)}
     list_display_links = ('name',)
     search_fields = ('name',)
     list_filter = ('name',)

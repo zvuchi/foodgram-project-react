@@ -31,15 +31,5 @@ class SubscribeAdmin(admin.ModelAdmin):
     search_fields = ('user',)
 
 
-class SubscribeAdmin(admin.ModelAdmin):
-    list_display = (
-        'id',
-        'user',
-        'author'
-    )
-    list_display_links = ('id', 'user')
-    search_fields = ('user',)
-
-
 admin.site.register(User, UsersAdmin)
 admin.site.register(Subscribe, SubscribeAdmin)
