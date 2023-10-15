@@ -1,15 +1,21 @@
 # praktikum_new_diplom
 
-# start
+1. start
 из папки /foodgram-project-react/infra
+```bash
 docker-compose -f docker-compose.yml up -d
+```
 
-# service
+2. service
+```bash
 docker compose exec backend python manage.py makemigrations
 docker compose exec backend python manage.py migrate
 docker compose exec backend python manage.py collectstatic --no-input
 docker-compose exec backend python manage.py load_ingredients
 docker compose exec backend python manage.py createsuperuser
+```
 
-# rebuild 
-docker-compose up -d --no-deps --build
+3. rebuild 
+```bash
+docker-compose up -d --no-deps --build {{app_name}}
+```
